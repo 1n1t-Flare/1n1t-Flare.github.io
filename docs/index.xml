@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on 1n1t-Flare Blog</title>
+    <link>http://localhost:1313/github.io/docs/</link>
+    <description>Recent content in Docs on 1n1t-Flare Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 1n1t</copyright>
+    <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docs</title>
+      <link>http://localhost:1313/github.io/docs/wp/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/github.io/docs/wp/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
