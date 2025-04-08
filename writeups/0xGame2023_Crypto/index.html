@@ -1795,8 +1795,8 @@ $$
       
     </figure>
 </p>
-<p>题中通过<code>encrypt()</code>函数向<code>noise_ </code>和 <code>mask_</code> 两个列表各添加4个大质数，并将<code>(mask*m + noise) % p </code>的结果添加到列表 <code>c_</code>  中。<code>m</code>是我们要找出的明文。理论上我们只要在有限域<code>GF(q)</code>中解出至少一组形如  <code>mask\_[i] * m+noise\_[i]=c\_[i]</code> 的方程就可以求出<code>m</code>。但本题最大的困难在于 <code>noise</code> 完全未知。注意到<code>mask</code>是511位的超大质数，再与<code>m</code>相乘的结果必然更大，而<code>noise</code>只是50位的质数，显然<code>mask*m</code> 远大于 <code>noise</code> ，我们可以把问题转化为已知高位的HNP问题，进一步，HNP问题可以在格上转化为CVP问题。</p>
-<p>由于对格理论了解的不够充分，解题时借鉴了<a href="https://ctf-wiki.org/crypto/asymmetric/lattice/cvp/" target="_blank">CVP - CTF Wiki (ctf-wiki.org)</a>上的部分思路和方法。 令向量 \(M\)=mask ,\(C\)=c_ , 数量阵$P=pE$ ,参数$l\approx log^\frac{1}{2}p$  (这里没弄懂底数是几，我按lg算的)。我们构造用如下矩阵表示的格
+<p>题中通过<code>encrypt()</code>函数向<code>noise_ </code>和 <code>mask_</code> 两个列表各添加4个大质数，并将<code>(mask*m + noise) % p </code>的结果添加到列表 <code>c_</code>  中。<code>m</code>是我们要找出的明文。理论上我们只要在有限域<code>GF(q)</code>中解出至少一组形如  <code>mask_[i] * m+noise_[i]=c_[i]</code> 的方程就可以求出<code>m</code>。但本题最大的困难在于 <code>noise</code> 完全未知。注意到<code>mask</code>是511位的超大质数，再与<code>m</code>相乘的结果必然更大，而<code>noise</code>只是50位的质数，显然<code>mask*m</code> 远大于 <code>noise</code> ，我们可以把问题转化为已知高位的HNP问题，进一步，HNP问题可以在格上转化为CVP问题。</p>
+<p>由于对格理论了解的不够充分，解题时借鉴了<a href="https://ctf-wiki.org/crypto/asymmetric/lattice/cvp/" target="_blank">CVP - CTF Wiki (ctf-wiki.org)</a>上的部分思路和方法。 令向量 \(M\)=mask ,\(C\)=c_ , 数量阵\(P=pE\) ,参数\(l\approx log^\frac{1}{2}p\)  (这里没弄懂底数是几，我按lg算的)。我们构造用如下矩阵表示的格
 $$
 \begin{bmatrix}
 P&amp;0\\
@@ -2052,7 +2052,7 @@ $$</p>
     
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
       &copy;
-      2024
+      2025
       1n1t
     </p>
     
